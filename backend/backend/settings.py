@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'blogs',
     'ckeditor',
+    #'reviews',
 ]
 
 MIDDLEWARE = [
