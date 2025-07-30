@@ -7,7 +7,7 @@ from .models import Blog, Comment, Vote
 from .serializers import BlogCardSerializer, BlogDetailSerializer, CommentSerializer
 
 class BlogCardListView(generics.ListAPIView):
-    queryset = Blog.objects.all().order_by('-upload_date')
+    queryset = Blog.objects.all().order_by('-publish_date')
     serializer_class = BlogCardSerializer
 
 class BlogDetailView(generics.RetrieveAPIView):
@@ -18,6 +18,23 @@ class BlogDetailView(generics.RetrieveAPIView):
 class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all().order_by('-created_at')
     serializer_class = CommentSerializer
+
+    def perform_create(self, serializer):
+        user_session_id = self.request.data.get('user_session_id')
+        serializer.save(user_session_id=user_session_id)
+
+    def destroy(self, request, *args, **kwargs):
+        comment = self.get_object()
+        user_session_id = request.data.get('user_session_id')
+
+        if comment.user_session_id != user_session_id:
+            return Response(
+                {"error": "You do not have permission to delete this comment."},
+                status=status.HTTP_403_FORBIDDEN
+            )
+
+        self.perform_destroy(comment)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['POST'])
 def submit_vote(request):
