@@ -1,0 +1,46 @@
+/* src/components/RatingSection.css */
+.rating-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    margin-top: 2rem;
+}
+
+.vote-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.vote-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.vote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the active like button */
+.vote-btn.like-active {
+  background-color: #28a745; /* Green */
+  color: white;
+  border-color: #218838;
+}
+
+/* Style for the active dislike button */
+.vote-btn.dislike-active {
+  background-color: #dc3545; /* Red */
+  color: white;
+  border-color: #c82333;
+}

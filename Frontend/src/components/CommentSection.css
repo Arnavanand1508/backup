@@ -1,0 +1,128 @@
+.comment-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    margin-top: 1.5rem;
+}
+.comment-title {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.comment-form button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  border: none;
+  background-color: #005a9c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.comment-item {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.comment-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* NEW: Style for the comment header to align name and delete button */
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.comment-item strong {
+  display: block;
+}
+.comment-item p {
+  margin: 0 0 5px 0;
+  color: #555;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.comment-item small {
+  color: #999;
+}
+
+/* NEW: Style for the delete button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #d9534f;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+.delete-btn:hover {
+  text-decoration: underline;
+  background-color: #f8d7da;
+}
+
+
+.view-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.view-more-dropdown {
+  cursor: pointer;
+  color: #005a9c;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.view-more-dropdown:hover {
+  background-color: #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.view-more-dropdown span {
+  margin-left: 8px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.view-more-dropdown:hover span {
+    transform: translateY(2px);
+}
+.view-more-btn {
+  padding: 10px 25px;
+  border: none;
+  background-color: #005a9c;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.view-more-btn:hover {
+    background-color: #004b80;
+    transform: translateY(-2px);
+}

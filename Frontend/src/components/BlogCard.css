@@ -1,0 +1,114 @@
+/* src/components/BlogCard.css */
+.blog-card {
+  width: 300px;
+  height: 500px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  /* ADDED: Re-added the colored border */
+  border: 2px solid rgb(17, 94, 138); /* Example: a subtle blue border */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  /* MODIFIED: Added border-color to transition for smooth effect */
+  transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25), 0 0 0 4px rgba(17, 94, 138, 0.5);
+  z-index: 5;
+  border-color: rgba(17, 94, 138, 0.8);
+}
+
+.blog-img {
+  width: calc(100% - 2rem);
+  height: 200px;
+  margin: 1rem auto 0 auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-content {
+  padding: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Makes this container fill available space */
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-around; /* Keeping space-around for current layout */
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.blog-date-info,
+.blog-likes-info,
+.blog-comments-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.meta-icon {
+  font-size: 1rem;
+  color: #003366;
+}
+
+
+.blog-content h3 {
+  margin: 0 0 0.5rem 0;
+  text-decoration: none;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  overflow: visible;
+  text-overflow: unset;
+  display: block;
+  -webkit-box-orient: unset;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  white-space: normal;
+  color: #003366;
+}
+
+.author-info {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+}
+
+.author-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+}
+/* ================================== */
+
+.blog-author {
+ display: none;
+}
+
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

@@ -1,0 +1,79 @@
+/* --- Main Footer Container --- */
+.site-footer {
+    margin-top: auto; 
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #ffffff;
+}
+
+/* --- Moving Disclaimer Bar --- */
+.moving-disclaimer {
+    background-color: #003366; /* FSSAI's primary blue */
+    color: #fff;
+    padding: 0.75rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.moving-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Pause animation on hover */
+.moving-disclaimer:hover .moving-text {
+    animation-play-state: paused;
+}
+
+.footer-email-link {
+    color: #ffff;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+/* --- Disclaimer Section (Lighter Blue) --- */
+.footer-disclaimer-section {
+    background-color: #45b3e0;
+    padding: 1rem 1rem;
+}
+
+.footer-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-disclaimer-text {
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+/* --- Bottom Bar (Darker Blue) --- */
+.footer-bottom-bar {
+    background-color: #45b3e0;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+}
+
+.footer-bottom-bar p {
+    margin: 0;
+    opacity: 0.9;
+}

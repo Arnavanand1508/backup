@@ -1,0 +1,74 @@
+/*
+ * MobileOptimizer.css
+ *
+ * This file contains styles to optimize the blog layout for mobile screens (max-width: 768px).
+ * It reorders the main page components into the specified vertical layout
+ * and ensures the slideshow remains fully functional, without altering the desktop design.
+*/
+
+@media (max-width: 768px) {
+
+  /*
+    First, we change the main layout container to be a flex column.
+    This allows us to stack and reorder the content vertically.
+    The 'gap' property adds consistent spacing between each component.
+  */
+  .layout-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the components horizontally */
+    gap: 2rem;           /* Add space between each component */
+    padding: 0 1rem;     /* Add some padding on the sides of the screen */
+  }
+
+  /*
+    The 'display: contents' rule is the key to our reordering strategy.
+    It effectively makes the wrapper elements (.left-column-wrapper, .right-sidebar)
+    "disappear" from the layout, allowing their children to become direct items
+    of the '.layout-main-content' flex container. This is what lets us reorder them.
+  */
+  .left-column-wrapper, .right-sidebar {
+    display: contents;
+  }
+
+  /*
+    Now that all components are direct children of the flex container,
+    we can use the 'order' property to arrange them as requested:
+    1. Slideshow (Carousel)
+    2. Search Bar
+    3. Featured Articles
+    4. Explore All Articles
+    5. Social Media Links
+  */
+  .carousel-container { order: 1; }
+  .search-widget-container { order: 2; }
+  .featured-articles-container { order: 3; }
+  .all-articles-container { order: 4; }
+  .social-media-container { order: 5; }
+
+
+  /*
+    Finally, we adjust the width of the components to ensure they look good
+    on a narrow screen. We make them take up most of the screen width
+    so they are easy to read and interact with.
+  */
+  .search-widget-container,
+  .featured-articles-container,
+  .social-media-container,
+  .all-articles-container {
+    width: 95%;          /* Use most of the screen width */
+    max-width: 500px;    /* But not too wide on larger phones */
+    margin-left: auto;   /* These two lines ensure it stays centered */
+    margin-right: auto;
+  }
+
+  /*
+    We ensure the carousel container takes the full width of the screen
+    to properly display the centered slideshow card, as defined in the
+    original mobile styles. The "desktop-like slideshow" functionality is
+    preserved, optimized for a single-card view on mobile.
+  */
+  .carousel-container {
+    width: 100%;
+  }
+}

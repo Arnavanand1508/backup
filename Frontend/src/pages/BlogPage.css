@@ -1,0 +1,114 @@
+/* General layout for the blog page container */
+.blog-page-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Georgia', serif;
+  color: #333;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.blog-page-content {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Main content area for the article */
+.blog-main-content {
+  flex: 3; /* Takes up 3/4 of the space */
+  border-right: 1px solid #eee;
+  padding-right: 2rem;
+}
+
+.blog-header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #003366; /* FSSAI Blue */
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.blog-main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  object-fit: cover;
+}
+
+.blog-article-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.blog-article-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* Sidebar for author information */
+.blog-sidebar {
+  flex: 1; /* Takes up 1/4 of the space */
+}
+
+.author-card {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.author-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 1rem;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.author-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+.author-bio {
+  font-size: 0.9rem;
+  color: #495057;
+  text-align: left;
+  border-top: 1px solid #dee2e6;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* --- RATING AND COMMENTS --- */
+.rating-section, .comment-section {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.rating-section h3, .comment-section h3 {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+  text-align: center;
+}

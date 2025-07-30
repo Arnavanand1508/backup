@@ -1,0 +1,25 @@
+.social-media-feed-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light background color */
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #303067; /* Match theme */
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.twitter-feed {
+  margin: 0 auto; /* Center the feed */
+}
+
+.twitter-timeline {
+  width: 100%;
+}
